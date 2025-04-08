@@ -1,5 +1,8 @@
 name: Docker Image CI
-
+on:
+  # позволяет запускать workflow вручную с вкладки actions в интерфейсе github.com
+  workflow_dispatch:
+  
 jobs:
   build:
     runs-on: ubuntu-latest
