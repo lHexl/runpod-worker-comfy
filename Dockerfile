@@ -75,7 +75,7 @@ RUN python3 download_loras.py -m "${LORAS}" -t "${CIV_KEY}"
 
 # Download checkpoints/vae/LoRA to include in image based on model type
 RUN if [ "$MODEL_TYPE" = "sdxl" ]; then \
-      wget -q -P models/checkpoints/ "https://civitai.com/api/download/models/${MODEL_CIV}?type=Model&format=SafeTensor&token=${CIV_KEY}" --content-disposition 
+      wget -q -P models/checkpoints/ "https://civitai.com/api/download/models/${MODEL_CIV}?type=Model&format=SafeTensor&token=${CIV_KEY}" --content-disposition; \ 
     elif [ "$MODEL_TYPE" = "sd3" ]; then \
       wget --header="Authorization: Bearer ${HUGGINGFACE_ACCESS_TOKEN}" -O models/checkpoints/sd3_medium_incl_clips_t5xxlfp8.safetensors https://huggingface.co/stabilityai/stable-diffusion-3-medium/resolve/main/sd3_medium_incl_clips_t5xxlfp8.safetensors; \
     elif [ "$MODEL_TYPE" = "flux1-schnell" ]; then \
