@@ -231,7 +231,7 @@ def process_output_images(outputs, job_id):
     """
 
     # The path where ComfyUI stores the generated images
-    COMFY_OUTPUT_PATH = os.environ.get("COMFY_OUTPUT_PATH", "E:/ComfyUI_windows_portable/ComfyUI/output")
+    COMFY_OUTPUT_PATH = os.environ.get("COMFY_OUTPUT_PATH", "/comfyui/output")
 
     output_images = []
     images = []

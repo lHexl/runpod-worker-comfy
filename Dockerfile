@@ -73,9 +73,9 @@ RUN mkdir -p models/checkpoints models/vae
 
 RUN python3 download_loras.py -m "${LORAS}" -t "${CIV_KEY}"
 
-RUN wget -q -P models/checkpoints/ "https://civitai.com/api/download/models/${MODEL_CIV}?type=Model&format=SafeTensor&size=full&fp=fp32&token=${CIV_KEY}" --content-disposition 
+# RUN wget -q -P models/checkpoints/ "https://civitai.com/api/download/models/${MODEL_CIV}?type=Model&format=SafeTensor&size=full&fp=fp32&token=${CIV_KEY}" --content-disposition 
 
-# RUN wget -q -P models/checkpoints/ "https://civitai.com/api/download/models/${MODEL_CIV}?type=Model&format=SafeTensor&token=${CIV_KEY}" --content-disposition 
+RUN wget -q -P models/checkpoints/ "https://civitai.com/api/download/models/${MODEL_CIV}?type=Model&format=SafeTensor&token=${CIV_KEY}" --content-disposition 
 
 # Stage 3: Final image
 FROM base as final
