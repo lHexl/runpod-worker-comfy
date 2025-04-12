@@ -74,7 +74,7 @@ RUN mkdir -p models/checkpoints models/vae
 RUN python3 download_loras.py -m "382152,534756,556208,1184250,1242203,1594293,1549441,1506035,1439429,1374404,1260971,1253021,983142,596040,427615,135867,321609" -t "${CIV_KEY}"
 
 # Download checkpoints/vae/LoRA to include in image based on model type
-RUN wget -q -P models/checkpoints/ "https://civitai.com/api/download/models/1478064?type=Model&format=SafeTensor&token=${CIV_KEY}" --content-disposition
+RUN wget -q -P models/checkpoints/ "https://civitai.com/api/download/models/1346181?type=Model&format=SafeTensor&token=${CIV_KEY}" --content-disposition
 
 # Stage 3: Final image
 FROM base as final
