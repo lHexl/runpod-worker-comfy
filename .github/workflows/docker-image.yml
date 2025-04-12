@@ -26,6 +26,6 @@ jobs:
     - name: Build the Docker image
       run: |
         docker login -u ${{ secrets.DOCKER_LOGIN }} -p ${{ secrets.DOCKER_PASS }}
-        docker build ${{ vars.DOC_ARGS }} --build-arg CIV_KEY=${{ secrets.CIV_KEY }} -t lhexl/runpod-worker-comfy:${{ vars.DOC_TAG }} --platform linux/amd64 .
-        docker image push lhexl/runpod-worker-comfy:${{ vars.DOC_TAG }}
+        docker build --build-arg CIV_KEY=${{ secrets.CIV_KEY }} -t lhexl/runpod-worker-comfy:pnrl --platform linux/amd64 .
+        docker image push lhexl/runpod-worker-comfy:pnrl
       
