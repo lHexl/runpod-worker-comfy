@@ -15,12 +15,7 @@
         }
     },
     "cnr_custom_nodes": {},
-    "file_custom_nodes": [
-        {
-            "filename": "websocket_image_save.py",
-            "disabled": false
-        }
-    ],
+    "file_custom_nodes": [],
     "pips": {
         "aiodns==3.2.0": "",
         "aiohappyeyeballs==2.6.1": "",
