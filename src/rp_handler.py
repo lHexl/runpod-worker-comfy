@@ -345,12 +345,12 @@ def handler(job):
 
     result = {**images_result, "refresh_worker": REFRESH_WORKER}
 
-    if(CALLBACK_URL!=""):
-        if ("callbackparam" in job_input):
-            out = {"jobid":prompt_id, "callbackparam":job_input["callbackparam"]}
-        else:
-            out = {"jobid":prompt_id, "callbackparam":""}
-        requests.post(CALLBACK_URL, json=out)
+    # if(CALLBACK_URL!=""):
+    #     if ("callbackparam" in job_input):
+    #         out = {"jobid":prompt_id, "callbackparam":job_input["callbackparam"]}
+    #     else:
+    #         out = {"jobid":prompt_id, "callbackparam":""}
+    #     requests.post(CALLBACK_URL, json=out)
 
     return result
 
